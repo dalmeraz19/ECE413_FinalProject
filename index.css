@@ -1,0 +1,65 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  body {
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  /* Set up the navigation bar container */
+  .navbar {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space items across the navbar */
+    align-items: center; /* Vertically align items */
+    padding: 10px 20px;
+    background-color: #333; /* Background color */
+    color: white;
+    overflow: hidden;
+  }
+  
+  
+  /* Flex styling to allow space for logo, menu, and title */
+  .navbar-menu, .project-title {
+    flex-shrink: 0; /* Prevent them from shrinking */
+  }
+  
+  
+  .navbar-menu {
+    display: flex; /* Horizontal layout for menu items */
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .navbar-menu li {
+    margin-left: 20px;
+  }
+  
+  .navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for menu items */
+  .navbar-menu a:hover {
+    background-color: #555;
+    border-radius: 4px;
+  }
+  
+  .homepage-title{
+    color: rgb(166, 77, 77);
+    font-size: large;
+    font-weight: bold;
+    margin-left: auto; /* Pushes the title to the right */
+    padding-left: 20px;
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden; /* Hide any overflow */
+    text-overflow: ellipsis; /* Add "..." if it overflows */
+  }
+
+
+
