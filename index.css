@@ -1,40 +1,46 @@
 html {
     height: 100%;
     width: 100%;
-  }
-  body {
-    font-family: 'Times New Roman', Times, serif;
-  }
+    background-color:rgb(218, 204, 186);
+}
   
-  /* Set up the navigation bar container */
-  .navbar {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space items across the navbar */
-    align-items: center; /* Vertically align items */
-    padding: 10px 20px;
-    background-color: #333; /* Background color */
-    color: white;
-    overflow: hidden;
-  }
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 50px;
+  background-color: white;
+}
   
   
-  /* Flex styling to allow space for logo, menu, and title */
-  .navbar-menu, .project-title {
-    flex-shrink: 0; /* Prevent them from shrinking */
-  }
+/* Set up the navigation bar container */
+.navbar {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space items across the navbar */
+  align-items: center; /* Vertically align items */
+  padding: 10px 20px;
+  background-color: #333; /* Background color */
+  color: white;
+  overflow: hidden;
+  font-size: 30px;
+}
+  
+ 
+/* Flex styling to allow space for logo, menu, and title */
+.navbar-menu, .project-title {
+  flex-shrink: 0; /* Prevent them from shrinking */
+}
   
   
-  .navbar-menu {
-    display: flex; /* Horizontal layout for menu items */
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+.navbar-menu {
+  display: flex; /* Horizontal layout for menu items */
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
   
-  .navbar-menu li {
-    margin-left: 20px;
-  }
+.navbar-menu li {
+  margin-left: 20px;
+}
   
   .navbar-menu a {
     color: white;
@@ -52,7 +58,7 @@ html {
   
   .homepage-title{
     color: rgb(166, 77, 77);
-    font-size: large;
+    font-size: 30px;
     font-weight: bold;
     margin-left: auto; /* Pushes the title to the right */
     padding-left: 20px;
@@ -60,6 +66,50 @@ html {
     overflow: hidden; /* Hide any overflow */
     text-overflow: ellipsis; /* Add "..." if it overflows */
   }
+
+.intro {
+  background-color:#333;
+  text-align:center;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+}
+
+.IotContainer {
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
+}
+   
+.IotImg {
+  max-width: 100%;
+  max-height:100%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:10px;
+}
+   
+.IotInfo {
+  font-size: 40px;
+  margin:50px;
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+table{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th,td {
+  font-size: 20px;
+}
 
 
 
