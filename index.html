@@ -1,71 +1,76 @@
 <!DOCTYPE html>
-
-<html>
-    <meta charset = "utf-8">
-    <meta name = "viewpoint" content = "width=device-width , initial-scale = 1">
-    <title> Heart Track </title>
-    <link href = "index.css" rel="stylesheet" type="text/css" />
-    <!--- <script src="script.js"></script> --> 
-
-</html>
-
-<body>  
-    <nav class = "navbar">
-        <ul class="navbar-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-        <span class = "homepage-title"> ECE 413/513 Final Project </span>
-    </nav>
-
-    <div class="intro">
-        <h1>Welcome to Heart Track</h1>
-        <p>Heart Track is a project aimed at providing real-time monitoring of heart rate and blood oxygen levels, offering easy access to crucial health data.</p>
-    </div>
-    <div class = "IotContainer">
-        <div class = "IotInfo">
-            <p style = "text-align: center; font-weight: bold;"><u>IoT Information</u></p>
-            <p>The Argon IoT Starter Kit from Particle is an IoT development kit built for creating reliable, connected devices with Wi-Fi capability. It includes an Argon microcontroller that supports Wi-Fi networking, making it ideal for prototyping IoT projects. With a powerful ARM Cortex M4 processor, built-in Bluetooth Low Energy (BLE), and a variety of sensors and components, this kit is particularly suitable for monitoring and data-gathering applications.</p>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Track - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="physician_portal.html">Physician Portal</a></li>
+                <li><a href="reference.html">References</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>Welcome to Heart Track</h1>
+            <p>A low-cost IoT-enabled app for heart rate and blood oxygen monitoring.</p>
+            <p>Heart Track is a project aimed at providing real-time monitoring of heart rate and blood oxygen levels, offering easy access to crucial health data.</p>
+        </header>
+        <div>
+            <h2 class="IotInfo">Project Info</h2>
+            <section id="info-section">
+                <div class="info">The Argon IoT Starter Kit from Particle is an IoT development kit built for creating reliable, connected devices with Wi-Fi capability. It includes an Argon microcontroller that supports Wi-Fi networking, 
+                    making it ideal for prototyping IoT projects. With a powerful ARM Cortex M4 processor, built-in Bluetooth Low Energy (BLE), and a variety of sensors and components, this kit is particularly suitable for monitoring and data-gathering applications.</div>
+            </section>
         </div>
-        <div class = "IotImg">
-            <img src = "C:\Users\ual-laptop\Desktop\ECE 413_FinalProject\ArgonKit.png">
-        </div>
+        <div>
+            <h2 class="team-header">Meet Our Team</h2>
+            <section id="team">
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="/api/placeholder/400/320" alt="Dalian">
+                    </div>
+                    <div class="team-content">
+                        <h3>Dalian Meraz</h3>
+                        <p>dalmeraz@arizona.edu</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="/api/placeholder/400/320" alt="Malcolm">
+                    </div>
+                    <div class="team-content">
+                        <h3>Malcolm Hayes</h3>
+                        <p>malcolmhayes@arizona.edu</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="/api/placeholder/400/320" alt="Reshma">
+                    </div>
+                    <div class="team-content">
+                        <h3>Reshma Yarlagadda</h3>
+                        <p>reshmayarlagadda@arizona.edu</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="/api/placeholder/400/320" alt="Anand">
+                    </div>
+                    <div class="team-content">
+                        <h3>Anand Ramaswamy</h3>
+                        <p>anandr@arizona.edu</p>
+                    </div>
+                </div>
+            </section>
+        </div>    
     </div>
-
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Photo</th>
-            <th>Email</th>
-        </tr>
-
-        <tr>
-            <td>Dalian Meraz</td>
-            <td>Photo</td>
-            <td><a href="dalmeraz@arizona.edu">dalmeraz@arizona.edu</a></td>
-        </tr>
-
-        <tr>
-            <td>Malcolm Hayes</td>
-            <td>Photo</td>
-            <td><a href="malcolmhayes@arizona.edu">malcolmhayes@arizona.edu</a></td>
-            
-        </tr>
-
-        <tr>
-            <td>Anand Ramaswamy</td>
-            <td>Photo</td>
-            <td><a href="anandr@arizona.edu">anandr@arizona.edu</a></td>
-        </tr>
-
-        <tr>
-            <td>Reshma Yarlagadda</td>
-            <td>Photo</td>
-            <td><a href="reshmayarlagadda@arizona.edu">reshmayarlagadda@arizona.edu</a></td>
-        </tr>
-    </table>
-
-
-
-    
 </body>
+</html>
