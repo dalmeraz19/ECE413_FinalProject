@@ -19,8 +19,35 @@
     </nav>
 
     <main>
-        <h2>Weekly Summary</h2>
-        <h2>Daily Detail View</h2>
+        <section id="weekly-summary">
+            <h2 class="weekly-sum-title">Weekly Summary</h2>
+            <div class="summary-stats">
+                <div>
+                    <h3>Average Heart Rate</h3>
+                    <p id="avg-heart-rate">--</p>
+                </div>
+                <div>
+                    <h3>Min Heart Rate</h3>
+                    <p id="min-heart-rate">--</p>
+                </div>
+                <div>
+                    <h3>Max Heart Rate</h3>
+                    <p id="max-heart-rate">--</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="daily-details">
+            <h2 class="daily-view-title">Daily Detail View</h2>
+            <div>
+                <label for="date-selector">Select Date:</label>
+                <input type="date" id="date-selector">
+            </div>
+            <div class="chart-container">
+                <canvas id="heart-rate-chart"></canvas>
+                <canvas id="oxygen-saturation-chart"></canvas>
+            </div>
+        </section>
     </main>
 </body>
 </html>

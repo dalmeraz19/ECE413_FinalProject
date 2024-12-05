@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart Track - Account</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="./account.js" defer></script>
 </head>
 <body>
     <nav>
@@ -17,6 +18,76 @@
         </ul>
     </nav>
 
-    <h2>login/ SignUp goes here</h2>
+    <div class="account-container">
+        <div class="account-form-wrapper">
+            <div id="login-section" class="account-form active">
+                <div class="greet">Welcome Back</div>
+                <p >Login to continue to Heart Track</p>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Login</button>
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                </form>
+            </div>
+
+            <div id="signup-section" class="account-form">
+                <h2>Create Account</h2>
+                <p>Join Heart Track and start monitoring your health</p>
+                <form id="signup-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signup-first-name">First Name</label>
+                            <input type="text" id="signup-first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-last-name">Last Name</label>
+                            <input type="text" id="signup-last-name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signup-age">Age</label>
+                            <input type="number" id="signup-age" min="18" max="120" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-gender">Gender</label>
+                            <select id="signup-gender" required>
+                                <option value="">Select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Create Account</button>
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
