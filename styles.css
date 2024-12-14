@@ -4,6 +4,7 @@
     --secondary: #f472b6;
     --neutral-50: #f8fafc;
     --neutral-100: #f1f5f9;
+    --neutral-400: #cce2f8;
     --neutral-700: #334155;
     --neutral-800: #1e293b;
     --shadow-sm: 0 2px 4px rgba(14, 165, 233, 0.1);
@@ -40,7 +41,7 @@
   nav ul {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: center;
     gap: 3rem;
@@ -186,7 +187,7 @@
 
 #login-form input, #signup-form input, #measurement-form input {
     padding: 0.5rem;
-    border: 1px solid var(--neutral-100);
+    border: 1px solid var(--neutral-400);
     border-radius: 0.5rem;
 }
 
@@ -349,12 +350,17 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
 }
 
-/* Responsive Adjustments for Form Rows */
-@media (max-width: 480px) {
-  .form-row {
-      flex-direction: column;
-      gap: 1rem;
-  }
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  background: var(--primary);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }
 
 /* Password Strength Indicator (optional, can be enhanced with JS) */
@@ -385,6 +391,70 @@ select:focus {
 /* Show the active form */
 .account-form.active {
   display: block;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.popup {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+  display: none;
+  z-index: 1000;
+}
+
+.popup p {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.popup .email {
+  color: #666;
+  font-size: 12px;
+}
+
+.popup hr {
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.popup-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  margin: 5px 0;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #007BFF;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.popup-btn:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments for Form Rows */
+@media (max-width: 480px) {
+  .form-row {
+      flex-direction: column;
+      gap: 1rem;
+  }
 }
 /* Responsive Adjustments */
 @media (max-width: 480px) {

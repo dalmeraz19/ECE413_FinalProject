@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart Track - Dashboard</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="account.html">Account</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="physician_portal.html">Physician Portal</a></li>
-            <li><a href="reference.html">References</a></li>
+    <nav style="padding:8px;">
+        <ul style="justify-content:space-between;gap:2rem;padding:0">
+            <li style = "padding-top: 6px;"><a href="index.html"><i class="arrow left"></i> Go to home</a></li>
+            <li style="color: var(--primary);font-size: 25px;font-weight: 300;vertical-align:middle;"><b>Dashboard</b></li>
+            <li style="margin-left: 53em;padding-top:5px;"><img src="assets\icons\profile icon.jpg" alt="Avatar" class="avatar" onclick="togglePopup()">
+            </li>
         </ul>
     </nav>
+    <div id="profilePopup" class="popup">
+        <p class="name">Name</p>
+        <p class="email">name@gmail.com</p>
+        <hr>
+        <button class="popup-btn">Add a Device</button>
+        <button class="popup-btn">Logout</button>
+    </div>
 
     <main>
         <section id="weekly-summary">
