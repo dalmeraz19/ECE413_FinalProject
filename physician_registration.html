@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physician Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="phy-reg-container">
+        <form class="registration-form" action="" method="">
+            <h2>Physician Registration</h2>
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="experience">Years of Experience</label>
+                <input type="number" id="experience" name="experience" placeholder="Enter years of experience" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Password</label>
+                <input type="password" id="confirm" name="password" placeholder="Confirm Password" min="0" required>
+            </div>
+            <a href="account.html" type="submit" class="btn">Register</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart Track - Dashboard</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <nav style="padding:8px;">
@@ -21,39 +21,26 @@
         <p class="email">name@gmail.com</p>
         <hr>
         <button class="popup-btn">Add a Device</button>
+        <button class="popup-btn">Account Details</button>
         <button class="popup-btn">Logout</button>
     </div>
+    <div class="user-container" style="margin-left: 240px; padding-top: 80px;">
+        <!-- Weekly Summary Card -->
+        <div class="card weekly-stats">
+            <h3>Weekly Summary</h3>
+            <p class="stat"><strong>Average Heart Rate:</strong> <span id="weekly-avg">N/A</span></p>
+            <p class="stat"><strong>Maximum Heart Rate:</strong> <span id="weekly-max">N/A</span></p>
+            <p class="stat"><strong>Minimum Heart Rate:</strong> <span id="weekly-min">N/A</span></p>
+        </div>
 
-    <main>
-        <section id="weekly-summary">
-            <h2 class="weekly-sum-title">Weekly Summary</h2>
-            <div class="summary-stats">
-                <div>
-                    <h3>Average Heart Rate</h3>
-                    <p id="avg-heart-rate">--</p>
-                </div>
-                <div>
-                    <h3>Min Heart Rate</h3>
-                    <p id="min-heart-rate">--</p>
-                </div>
-                <div>
-                    <h3>Max Heart Rate</h3>
-                    <p id="max-heart-rate">--</p>
-                </div>
-            </div>
-        </section>
+        <!-- Detailed Daily View Card -->
+        <div class="card charts-container">
+            <h3>Detailed Daily View</h3>
+            <canvas id="heartRateChart" height="200"></canvas>
+            <canvas id="oxygenChart" height="200"></canvas>
+        </div>
+    </div>
 
-        <section id="daily-details">
-            <h2 class="daily-view-title">Daily Detail View</h2>
-            <div>
-                <label for="date-selector">Select Date:</label>
-                <input type="date" id="date-selector">
-            </div>
-            <div class="chart-container">
-                <canvas id="heart-rate-chart"></canvas>
-                <canvas id="oxygen-saturation-chart"></canvas>
-            </div>
-        </section>
-    </main>
+    <script src="dashboard.js"></script>
 </body>
 </html>

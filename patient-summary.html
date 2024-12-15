@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Summary</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="patient-summary.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Weekly Summary Card -->
+        <div class="card weekly-stats">
+            <h3>Weekly Summary</h3>
+            <p class="stat"><strong>Average Heart Rate:</strong> <span id="weekly-avg">N/A</span></p>
+            <p class="stat"><strong>Maximum Heart Rate:</strong> <span id="weekly-max">N/A</span></p>
+            <p class="stat"><strong>Minimum Heart Rate:</strong> <span id="weekly-min">N/A</span></p>
+            <!-- Frequency Control Section -->
+            <div class="frequency-controls">
+                <label for="frequency">Adjust Frequency of Measurement</label>
+                <input type="range" id="frequency" name="frequency" min="1" max="10" step="1" value="5">
+                <span id="frequency-value">5</span> Times per Day
+            </div>
+        </div>
+
+        <!-- Detailed Daily View Card -->
+        <div class="card charts-container">
+            <h3>Detailed Daily View</h3>
+            <canvas id="heartRateChart" height="200"></canvas>
+            <canvas id="oxygenChart" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="patient-summary.js"></script>
+</body>
+</html>

@@ -3,26 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heart Track - Physician Portal</title>
+    <title>Physician Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="account.html">Account</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="physician_portal.html">Physician Portal</a></li>
-            <li><a href="reference.html">References</a></li>
+    <nav style="padding:8px;">
+        <ul style="justify-content:space-between;gap:2rem;padding:0">
+            <li style = "padding-top: 6px;"><a href="index.html"><i class="arrow left"></i> Go to home</a></li>
+            <li style="color: var(--primary);font-size: 25px;font-weight: 300;vertical-align:middle;"><b>Physician Portal</b></li>
+            <li style="margin-left: 50em;padding-top:5px;"><img src="assets\icons\profile icon.jpg" alt="Avatar" class="avatar" onclick="togglePopup()">
+            </li>
         </ul>
     </nav>
+    <div class="">
+        <a href="#all-patients">All Patients</a>
+        <a href="#patient-summary">Patient Summary</a>
+        <a href="#daily-view">Detailed Daily View</a>
+        <a href="#controls">Measurement Controls</a>
+    </div>
 
-    <main>
-        <h2 class="portal-title">Physician Portal</h2>
-        <p>Select a patient to view their summary and detailed views.</p>
-        <ul>
-            <li>Patient: <a href="">Patient-1</a></li>
-        </ul>
-    </main>
+    <section class="patients-section" id="all-patients">
+        <h2 style="margin-top: 70px;color: #334155; text-align: center;">List of All Patients</h2>
+        <div class="patient-container">
+            <table class="patients-table">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>7-Day Avg Heart Rate</th>
+                        <th>Max. Heart Rate</th>
+                        <th>Min. Heart Rate</th>
+                        <th>Age</th>
+                        <th>Condition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="patient-summary.html?patientId=1">Patient 1</a></td>
+                        <td>75 bpm</td>
+                        <td>255</td>
+                        <td>65</td>
+                        <td>62</td>
+                        <td>Arrhythmia</td>
+                    </tr>
+                    <tr>
+                        <td><a href="patient-summary.html?patientId=2">Patient 2</a></td>
+                        <td>82 bpm</td>
+                        <td>248</td>
+                        <td>80</td>
+                        <td>47</td>
+                        <td>Hypertension</td>
+                    </tr>
+                    <tr>
+                        <td><a href="patient-summary.html?patientId=3">Patient 3</a></td>
+                        <td>78 bpm</td>
+                        <td>252</td>
+                        <td>75</td>
+                        <td>55</td>
+                        <td>Diabetes</td>
+                    </tr>
+                    <tr>
+                        <td><a href="patient-summary.html?patientId=4">Patient 4</a></td>
+                        <td>90 bpm</td>
+                        <td>240</td>
+                        <td>85</td>
+                        <td>70</td>
+                        <td>Cardiomyopathy</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 </body>
 </html>

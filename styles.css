@@ -4,6 +4,7 @@
     --secondary: #f472b6;
     --neutral-50: #f8fafc;
     --neutral-100: #f1f5f9;
+    --neutral-200: #cbedff;
     --neutral-400: #cce2f8;
     --neutral-700: #334155;
     --neutral-800: #1e293b;
@@ -302,9 +303,7 @@
 }
 
 .form-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: inline-block;
   margin-top: 1rem;
   font-size: 0.9rem;
 }
@@ -449,6 +448,301 @@ select:focus {
   text-decoration: underline;
 }
 
+/* Physician Registration */
+.phy-reg-container {
+  background-color: #f4f9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-form {
+  background: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 40%;
+}
+
+.registration-form h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0284c7;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--neutral-400);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--neutral-400);
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display:inline-block;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* All patients styling */
+
+.patients-section {
+  padding: 1em;
+}
+
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.patients-table th,
+.patients-table td {
+  border: 1px solid #ffffff;
+  padding: 0.75em;
+  text-align: left;
+}
+
+.patients-table th {
+  background-color: var(--primary-dark);
+  font-weight: bold;
+  color:white;
+}
+
+.patients-table td {
+  background-color: var(--neutral-200);
+  font-weight: bold;
+  color:var(--neutral-700)
+}
+
+.patients-table a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.patients-table a:hover {
+  text-decoration: underline;
+}
+
+.patients-table input[type="number"] {
+  width: 60px;
+  padding: 0.3em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Dashboard and patient summary styling */
+.user-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  max-width: 800px;
+  width: 100%;
+}
+
+.card {
+  background-color: #e3f1ff;;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+h2, h3 {
+  text-align: center;
+  color: var(--primary-dark);
+  margin-bottom: 1em;
+}
+
+.weekly-stats, .charts-container {
+  width: 100%;
+}
+
+.stat {
+  margin: 0.5em 0;
+}
+
+.stat span {
+  color: var(--neutral-700);
+  font-weight: bold;
+}
+
+canvas {
+  margin-top: 1em;
+  border-radius: 10px;
+}
+
+/* Animations for the cards */
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .patients-table th,
+  .patients-table td {
+      font-size: 0.9em;
+  }
+
+  .patients-table input[type="number"] {
+      width: 50px;
+  }
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+  header h1 {
+      font-size: 3rem;
+  }
+
+  .team-member {
+      flex: 0 1 calc(45% - 1.25rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Navigation */
+  nav ul {
+      gap: 1rem;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* Header */
+  header {
+      padding: 6rem 1rem 3rem;
+  }
+
+  header h1 {
+      font-size: 2.5rem;
+  }
+
+  header p {
+      font-size: 1rem;
+  }
+
+  /* Info and Team Sections */
+  .info {
+      margin: 0 20px;
+  }
+
+  .IotInfo, .team-header, .portal-title, .daily-view-title, .weekly-sum-title {
+      font-size: 2rem;
+      padding: 30px 10px;
+  }
+
+  #team {
+      padding: 0 1rem;
+      gap: 1.5rem;
+  }
+
+  .team-member {
+      flex: 0 1 100%;
+  }
+
+  /* Account Form */
+  .account-form-wrapper {
+      max-width: 95%;
+      margin: 20px auto;
+  }
+
+  .form-row {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+
+  /* Popup */
+  .popup {
+      width: 90%;
+      right: 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Tighter mobile optimization */
+  header h1 {
+      font-size: 2rem;
+  }
+
+  header p {
+      font-size: 0.9rem;
+  }
+
+  .IotInfo, .team-header, .portal-title, .daily-view-title, .weekly-sum-title {
+      font-size: 1.75rem;
+      padding: 20px 10px;
+  }
+
+  .info {
+      margin: 0 10px;
+  }
+
+}
 /* Responsive Adjustments for Form Rows */
 @media (max-width: 480px) {
   .form-row {

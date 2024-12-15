@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 1em;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    color: var(--neutral-800);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    max-width: 800px;
+    width: 100%;
+}
+
+.card {
+    background-color: #e3f1ff;;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+h2, h3 {
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 1em;
+}
+
+.weekly-stats, .charts-container {
+    width: 100%;
+}
+
+.stat {
+    margin: 0.5em 0;
+}
+
+.stat span {
+    color: var(--neutral-700);
+    font-weight: bold;
+}
+
+canvas {
+    margin-top: 1em;
+    border-radius: 10px;
+}
+
+/* Animations for the cards */
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.frequency-controls {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.frequency-controls label {
+    font-weight: bold;
+    color: var(--neutral-700);
+}
+
+.frequency-controls input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid var(--neutral-400);
+    border-radius: 8px;
+    background-color: var(--neutral-50);
+    color: var(--neutral-700);
+}
