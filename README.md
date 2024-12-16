@@ -76,7 +76,7 @@ GitHub Repo Link: https://github.com/dalmeraz19/ECE413_FinalProject/
 ## Demonstration
 - **Pitch Video:** https://youtu.be/n5SJ6ec5CUA
 - **Demo Video:** [Link to Demo Video](#)
-- **Live Application:** [Link to Hosted Application](#)
+- **Live Application:** ec2-18-117-93-208.us-east-2.compute.amazonaws.com:3000/index.html
 
 ---
 
