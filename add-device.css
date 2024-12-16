@@ -1,0 +1,177 @@
+/* General styles */
+body {
+    margin: 0;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  .container {
+    width:500px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* Card style */
+  .card {
+    background: #f1f5f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.1);
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    color: #0284c7;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styles */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #cce2f8;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 1rem;
+  }
+  
+  textarea {
+    resize: none;
+    height: 80px;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    box-shadow: 0 2px 4px rgba(14, 165, 233, 0.1);
+  }
+  
+  .btn-primary {
+    background: #0ea5e9;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .btn-primary:hover {
+    background: #0284c7;
+  }
+  
+  /* Device list styles */
+  .device-list {
+    margin-top: 40px;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    color: #334155;
+    margin-bottom: 15px;
+  }
+  
+  #deviceItems {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .device-item {
+    padding: 10px 15px;
+    background: #f8fafc;
+    border: 1px solid #cbedff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(14, 165, 233, 0.1);
+  }
+  
+  .remove-btn {
+    background-color: #f472b6;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-btn:hover {
+    background-color: #c2185b;
+  }
+
+  /* Media Queries */
+@media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .card,
+    .device-list {
+      padding: 15px;
+    }
+  
+    .title,
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .btn-primary {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  
+    .device-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .remove-btn {
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .title,
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .btn-primary {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+  
+    label {
+      font-size: 0.9rem;
+    }
+  
+    input,
+    textarea {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    .device-item {
+      font-size: 0.9rem;
+    }
+  }

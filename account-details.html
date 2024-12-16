@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="account-details.css">
+    <title>Account Details</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Account Details</h1>
+        </div>
+        <div class="profile">
+            <div class="profile-details">
+                <h2>Ab cd</h2>
+                <p>abc@gmail.com</p>
+                <p id="physician-info" class="physician-info">Physician: Not Selected</p>
+            </div>
+        </div>
+        <div class="details">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" value="Ab cd">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter New Password">
+            </div>
+        </div>
+        <div class="actions">
+            <button class="btn">Save Changes</button>
+            <button class="btn btn-secondary">Cancel</button>
+        </div>
+    </div>
+    <!-- Physician Selection Section -->
+    <div class="container">
+        <div class="physician-section">
+            <h2>Select Your Physician</h2>
+            <p>Please choose a physician from the list below:</p>
+            <select id="physician-dropdown">
+                <option value="">Select Physician</option>
+                <option value="Dr. Alex Smith">Dr. ALex smith</option>
+                <option value="Dr. Sarah Smith">Dr. Sarah Smith</option>
+                <option value="Dr. Emily Taylor">Dr. Emily Taylor</option>
+                <option value="Dr. Michael Brown">Dr. Michael Brown</option>
+            </select>
+            <div class="actions">
+                <button id="save-physician" class="btn">Save Selection</button>
+                <button id="cancel-physician" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="account-details.js"></script>
+</body>
+</html>
