@@ -62,8 +62,11 @@ GitHub Repo Link: https://github.com/dalmeraz19/ECE413_FinalProject/
    npm start
    ```
 4. **Configure IoT device:**
-   - Upload the provided firmware code to the IoT development board.
-   - Connect the device to Wi-Fi.
+   - Setup your Photon/Argon device on their website: https://setup.particle.io/?family=photon&device=photon
+   - Install Particle Workbench for VSCode: https://www.particle.io/workbench/
+   - Create a project and copy the code into the project folder.
+   - Compile and flash the firmware code to the IoT Device.
+   - Connect the device to Wi-Fi using the Particle setup portal.
 
 5. **Access the application:**
    - Open a browser and navigate to `http://localhost:3000`.
