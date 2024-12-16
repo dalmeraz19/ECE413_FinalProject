@@ -76,9 +76,10 @@ GitHub Repo Link: https://github.com/dalmeraz19/ECE413_FinalProject/
 ## Usage
 1. **Create an account:** Register using an email and strong password.
 2. **Add devices:** Link IoT devices to your account.
-3. **Configure measurements:** Define time range and frequency.
+3. **Configure measurements:** Receive alerts every 30 minutes for measurement collection
 4. **View data:** Access weekly summaries and daily charts.
 5. **(ECE 513)** Physician portal for patient data management.
+6. **Database** Store heart rate and blood oxygen levels inside the secure database.
 
 ---
 
