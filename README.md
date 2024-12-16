@@ -1,4 +1,4 @@
-# Heart Track: IoT-enabled Heart Rate Monitoring Application
+# ECE 513 Project: Heart Track, an IoT-enabled Heart Rate Monitoring Application
 
 ## Overview
 The **Heart Track** project is a low-cost, IoT-enabled web application for monitoring heart rate and blood oxygen saturation levels. It is designed to help users track their health metrics conveniently and share them with physicians (ECE 513). The project includes both hardware and software components, integrating IoT devices with a responsive web application.
