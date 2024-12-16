@@ -72,7 +72,7 @@ The **Heart Track** project is a low-cost, IoT-enabled web application for monit
 ---
 
 ## Demonstration
-- **Pitch Video:** [Link to Pitch Video](#)
+- **Pitch Video:** https://youtu.be/n5SJ6ec5CUA
 - **Demo Video:** [Link to Demo Video](#)
 - **Live Application:** [Link to Hosted Application](#)
 
