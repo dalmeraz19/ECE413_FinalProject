@@ -124,6 +124,7 @@ body {
     .card,
     .device-list {
       padding: 15px;
+      width: 60%;
     }
   
     .title,

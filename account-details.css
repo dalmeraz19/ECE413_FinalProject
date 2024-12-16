@@ -142,6 +142,7 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 1.5rem;
+        width:80%;
     }
 
     .header h1 {
