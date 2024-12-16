@@ -49,8 +49,14 @@ GitHub Repo Link: https://github.com/dalmeraz19/ECE413_FinalProject/
    ```
 2. **Install dependencies:**
    ```bash
-   npm install
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+   source ~/.nvm/nvm.sh
+   nvm install 20.18.0
+   npm install 
    ```
+   -Install Node.js v20.18.0 https://nodejs.org/en/about/previous-releases
+   -Install MongoDB version 8.0 https://www.mongodb.com/try/download/community
+
 3. **Run the server:**
    ```bash
    npm start
