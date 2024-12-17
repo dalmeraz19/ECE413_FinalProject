@@ -52,45 +52,44 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Store user data in localStorage
-        const userInfo = {
-            name: name,
-            email: email,
-            password: password,
-            experience: null  // null for user
-        };
-
-        // Save userInfo in localStorage (can also use sessionStorage for temporary storage)
-        localStorage.setItem('userInfo', JSON.stringify(userInfo));
-        if (localStorage.getItem('userInfo')) {
-            localStorage.removeItem('physicianInfo');
-        }
-
-        alert('Sign up successful!');
-        window.location.href = 'dashboard.html';  // Redirect to login page
-
         // Send data to the backend
-        // try {
-        //     const response = await fetch('http://your-backend-url/api/register', {
-        //         method: 'POST',
-        //         headers: {
-        //             'Content-Type': 'application/json',
-        //         },
-        //         body: JSON.stringify({ name, email, password }),
-        //     });
+        try {
+            const response = await fetch('http://your-backend-url/api/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, password }),
+            });
 
-        //     const data = await response.json();
-        //     if (response.ok) {
-        //         alert('Account created successfully!');
-        //         // Switch to login form
-        //         showLoginForm(e);
-        //     } else {
-        //         alert(data.error || 'Failed to create account.');
-        //     }
-        // } catch (error) {
-        //     console.error('Error:', error);
-        //     alert('An error occurred. Please try again.');
-        // }
+            const data = await response.json();
+            if (response.ok) {
+                alert('Account created successfully!');
+                // Switch to login form
+                showLoginForm(e);
+            } else {
+                alert(data.error || 'Failed to create account.');
+            }
+        } catch (error) {
+            // console.error('Error:', error);
+            // alert('An error occurred. Please try again.');
+            // Store user data in localStorage
+            const userInfo = {
+                name: name,
+                email: email,
+                password: password,
+                experience: null  // null for user
+            };
+
+            // Save userInfo in localStorage (can also use sessionStorage for temporary storage)
+            localStorage.setItem('userInfo', JSON.stringify(userInfo));
+            if (localStorage.getItem('userInfo')) {
+                localStorage.removeItem('physicianInfo');
+            }
+
+            alert('Sign up successful!');
+            window.location.href = 'dashboard.html';  // Redirect to login page
+            }
     });
 
     // Login form submission handling
