@@ -1,8 +1,8 @@
-// Importing the mongoose library for database modeling
+// Importing mongoose library for database modeling
 const mongoose = require('mongoose');
 
-// Defining the user schema
-const userSchema = mongoose.Schema({
+// Defining the physician schema
+const physicianSchema = mongoose.Schema({
     // Name field with validation rules
     name: {
         type: String,
@@ -27,10 +27,16 @@ const userSchema = mongoose.Schema({
         trim: true,
         select: false, // Excludes the password from query results by default
     },
+    // Experience field for the physician's years of experience
+    experience: {
+        type: Number, // Experience is measured in years
+        required: [true, 'Experience is required'],
+        min: [0, "Experience cannot be negative"], // Ensures non-negative values
+    },
 }, {
     // Automatically adds createdAt and updatedAt timestamps
     timestamps: true
 });
 
-// Exporting the user schema as a model named "User"
-module.exports = mongoose.model("User", userSchema);
+// Exporting the physician schema as a model named "physician"
+module.exports = mongoose.model("physician", physicianSchema);
