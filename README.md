@@ -47,6 +47,7 @@ GitHub Repo Link: https://github.com/dalmeraz19/ECE413_FinalProject/
    git clone <repository-url>
    cd HeartTrack
    ```
+   - Remove the backend code out of its folder so that it is in the same directory as the front end.
 2. **Install dependencies:**
    ```bash
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
