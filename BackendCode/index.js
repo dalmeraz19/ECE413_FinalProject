@@ -1,12 +1,18 @@
 // Import required dependencies
+const https = require("https");
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
-
+const fs = require("fs");
+require('dotenv').config();
 // Import the authentication router
 const authRouter = require('./routers/authRouter');
+
+// Parsing the form of body to take
+// input from forms
+const bodyParser = require("body-parser");
 
 // Initialize the Express application
 const app = express();
@@ -33,7 +39,23 @@ app.get('/', (req, res) => {
     res.json({message: "Hello from the server"}); // Respond with a welcome message at the root route
 });
 
-// Start the server and listen on port 3000
-app.listen(3000, () => {
-    console.log('listening...'); // Log server start message
-});
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// Creating object of key and certificate
+// for SSL
+const options = {
+    key: fs.readFileSync("server.key"),
+    cert: fs.readFileSync("server.cert"),
+};
+
+// Creating https server by passing
+// options and app object
+https.createServer(options, app)
+    .listen(3000, ()=> {
+        console.log("Server started at port 3000");
+    });
+// // Start the server and listen on port 3000
+// app.listen(3000, () => {
+//     console.log('listening...'); // Log server start message
+// });

@@ -196,6 +196,7 @@ exports.physicianSignin = async (req, res) => {
                 expires: new Date(Date.now() + 8 * 3600000),
                 httpOnly: process.env.NODE_ENV === 'production',
                 secure: process.env.NODE_ENV === 'production',
+				sameSite: 'strict'
             })
             .json({
                 success: true,
