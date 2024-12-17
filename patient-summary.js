@@ -56,6 +56,10 @@ const patients = {
 // Get the patientId from the URL
 const urlParams = new URLSearchParams(window.location.search);
 const patientId = urlParams.get("patientId");
+let patientName = patients[patientId].name
+document.getElementById("week-summary").innerHTML = `${patientName}'s Weekly Summary`;
+document.getElementById("daily-view").innerHTML = `${patientName}'s Daily View`;
+
 
 // Display the patient's summary
 const weeklyAvg = document.getElementById("weekly-avg");
