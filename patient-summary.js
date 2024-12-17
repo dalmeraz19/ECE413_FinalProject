@@ -21,7 +21,7 @@ const patients = {
             minHeartRate: 72,
             dailyData: {
                 time: ["8 AM", "10 AM", "12 PM", "2 PM", "4 PM", "6 PM", "8 PM"],
-                heartRate: [80, 82, 85, 88, 85, 80, 78],
+                heartRate: [70, 82, 85, 75, 85, 80, 78],
                 oxygenLevel: [94, 93, 95, 96, 94, 92, 91],
             },
         },

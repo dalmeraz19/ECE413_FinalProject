@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Check authentication
-    // const token = localStorage.getItem('authToken');
-    // if (!token) {
-    //     window.alert("login/signup before proceeding to dashboard")
-    //     window.location.href = 'account.html';
-    // }
+    const token = localStorage.getItem('userInfo');
+    if (!token) {
+        // Apply the blur effect to the background
+        document.body.style.filter = 'blur(5px)';
+        // After the alert is dismissed, automatically redirect
+        window.location.href = 'account.html';
+    }
 
 
     // Fetch weekly summary data

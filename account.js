@@ -30,19 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Password validation function
     function isStrongPassword(password) {
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-        console.log('hi')
+        // console.log('hi')
         return passwordRegex.test(password);
     }
 
     // Signup form submission handling
     signupForm.addEventListener('submit', async (e) => {
-        console.log('hello')
         e.preventDefault();
 
+        const name = document.getElementById('name').value;
         const email = document.getElementById('signup-email').value;
         const password = document.getElementById('signup-password').value;
         const confirmPassword = document.getElementById('confirm-password').value;
-
         // Validate input
         if (!isStrongPassword(password)) {
             alert('Password must be at least 8 characters long, include uppercase, lowercase, a number, and a special character.');
@@ -53,28 +52,45 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Send data to the backend
-        try {
-            const response = await fetch('http://your-backend-url/api/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password }),
-            });
+        // Store user data in localStorage
+        const userInfo = {
+            name: name,
+            email: email,
+            password: password,
+            experience: null  // null for user
+        };
 
-            const data = await response.json();
-            if (response.ok) {
-                alert('Account created successfully!');
-                // Switch to login form
-                showLoginForm(e);
-            } else {
-                alert(data.error || 'Failed to create account.');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred. Please try again.');
+        // Save userInfo in localStorage (can also use sessionStorage for temporary storage)
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+        if (localStorage.getItem('userInfo')) {
+            localStorage.removeItem('physicianInfo');
         }
+
+        alert('Sign up successful!');
+        window.location.href = 'dashboard.html';  // Redirect to login page
+
+        // Send data to the backend
+        // try {
+        //     const response = await fetch('http://your-backend-url/api/register', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify({ name, email, password }),
+        //     });
+
+        //     const data = await response.json();
+        //     if (response.ok) {
+        //         alert('Account created successfully!');
+        //         // Switch to login form
+        //         showLoginForm(e);
+        //     } else {
+        //         alert(data.error || 'Failed to create account.');
+        //     }
+        // } catch (error) {
+        //     console.error('Error:', error);
+        //     alert('An error occurred. Please try again.');
+        // }
     });
 
     // Login form submission handling
@@ -84,27 +100,48 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('login-email').value;
         const password = document.getElementById('login-password').value;
 
-        // Send data to the backend
-        try {
-            const response = await fetch('http://your-backend-url/api/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password }),
-            });
+        // Retrieve user info from localStorage
+        const storedUserInfo = JSON.parse(localStorage.getItem('userInfo'));
 
-            const data = await response.json();
-            if (response.ok) {
-                alert('Login successful!');
-                // Redirect to dashboard
-                window.location.href = 'dashboard.html';
+        if (storedUserInfo) {
+            // Validate the email and password
+            if (storedUserInfo.email === email && storedUserInfo.password === password) {
+                // Check if experience exists to distinguish between physician and user
+                if (storedUserInfo.experience) {
+                    // Redirect to physician dashboard
+                    window.location.href = 'physician_portal.html';
+                } else {
+                    // Redirect to user dashboard
+                    window.location.href = 'dashboard.html';
+                }
             } else {
-                alert(data.error || 'Login failed. Please check your credentials.');
+                alert('Invalid email or password');
             }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred. Please try again.');
+        } else {
+            alert('No user found');
         }
+
+        // Send data to the backend
+        // try {
+        //     const response = await fetch('http://your-backend-url/api/login', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify({ email, password }),
+        //     });
+
+        //     const data = await response.json();
+        //     if (response.ok) {
+        //         alert('Login successful!');
+        //         // Redirect to dashboard
+        //         window.location.href = 'dashboard.html';
+        //     } else {
+        //         alert(data.error || 'Login failed. Please check your credentials.');
+        //     }
+        // } catch (error) {
+        //     console.error('Error:', error);
+        //     alert('An error occurred. Please try again.');
+        // }
     });
 });
